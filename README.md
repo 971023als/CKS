@@ -1,77 +1,83 @@
-# CKS (Certified Kubernetes Security Specialist) 스터디 가이드
+# CKS 학습 자료 및 도구
 
-CKS(Certified Kubernetes Security Specialist) 자격증 준비를 위한 리포지토리입니다. 이곳에서는 학습 자료, 실습 예제, 유용한 팁 등을 제공하여 Kubernetes 환경 보안에 대한 실무 능력을 강화할 수 있습니다.
-
----
-
-## 📘 CKS 자격증 소개
-
-**CKS**는 Kubernetes 환경 보안을 테스트하는 실무 중심의 자격증입니다. Kubernetes 관리 경험과 보안 베스트 프랙티스에 대한 지식이 요구됩니다.
-
-### 시험 정보
-- **시험 시간:** 2시간
-- **시험 형식:** 실습 기반 (핸즈온 과제)
-- **응시 조건:** 유효한 CKA(Certified Kubernetes Administrator) 자격증 보유
-- **시험 주제:**
-  - 클러스터 설정 및 구성
-  - 워크로드 보안
-  - 네트워크 정책
-  - 런타임 보안
-  - 모니터링 및 로깅
-
-공식 정보는 [CKS Certification Page](https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/)에서 확인하세요.
+## 📚 학습 자료
+1. **공식 문서**
+   - [Kubernetes Documentation](https://kubernetes.io/docs/)
+   - [CKS Curriculum](https://github.com/cncf/curriculum)
+   - [CNCF Security Whitepaper](https://github.com/cncf/tag-security)
+2. **유튜브 강의**
+   - [TechWorld with Nana - Kubernetes Security](https://www.youtube.com/c/TechWorldwithNana)
+   - [KodeKloud CKS Preparation](https://kodekloud.com/courses/)
+3. **온라인 강의**
+   - [Udemy - Kubernetes Security Specialist (CKS)](https://www.udemy.com/course/certified-kubernetes-security-specialist/)
+   - [A Cloud Guru - CKS Course](https://acloudguru.com/course/certified-kubernetes-security-specialist-cks)
+4. **연습 플랫폼**
+   - [Killer.sh](https://killer.sh/)
+   - [Katacoda Security Labs](https://www.katacoda.com/courses/kubernetes/security)
 
 ---
 
-## 📋 리포지토리 구조
-
-이 리포지토리는 다음과 같은 구조로 구성되어 있습니다:
-
-
----
-
-## 🛠 사전 준비
-
-시작하기 전에 다음을 준비하세요:
-- 유효한 **CKA 자격증**
-- Kubernetes 기본 개념 이해 (Pod, Deployment, Service 등)
-- Kubernetes 클러스터 접근 권한 (minikube, kind, 또는 클라우드 프로바이더 사용)
-
----
-
-## 🔍 학습 주제 및 자료
-
-### 1. 클러스터 설정
-- 안전한 etcd 클러스터 설정
-- 감사 로그(Audit Logs) 활성화
-- RBAC 및 접근 제어
-
-### 2. 워크로드 보안
-- 안전한 Pod 구성
-- Secrets 및 ConfigMap 관리
-- Kubernetes Admission Controller 이해
-
-### 3. 네트워크 보안
-- NetworkPolicy 설정
-- Ingress 및 Egress 트래픽 보안
-- 서비스 메시(Service Mesh) 기본
-
-### 4. 런타임 보안
-- AppArmor/SELinux로 컨테이너 보안 강화
-- 런타임 보안 모니터링 구현
-- 위협 탐지 및 대응
-
-### 5. 모니터링 및 로깅
-- 로깅 및 모니터링 도구 설정
-- Falco, Prometheus, ELK 스택 활용
+## 🛠️ 필수 도구
+1. **로컬 환경 설정**
+   - Docker: [설치 가이드](https://docs.docker.com/get-docker/)
+   - Minikube: [설치 가이드](https://minikube.sigs.k8s.io/docs/start/)
+   - Kind (Kubernetes in Docker): [설치 가이드](https://kind.sigs.k8s.io/docs/user/quick-start/)
+2. **CLI 도구**
+   - `kubectl`: [설치 가이드](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+   - `helm`: [설치 가이드](https://helm.sh/docs/intro/install/)
+   - `trivy`: [설치 가이드](https://aquasecurity.github.io/trivy/)
+   - `kube-bench`: [설치 가이드](https://github.com/aquasecurity/kube-bench)
+   - `kube-hunter`: [설치 가이드](https://github.com/aquasecurity/kube-hunter)
+3. **추가 도구**
+   - Falco: [설치 가이드](https://falco.org/)
+   - Open Policy Agent (OPA): [설치 가이드](https://www.openpolicyagent.org/docs/latest/)
+   - Prometheus & Grafana: [설치 가이드](https://prometheus.io/docs/introduction/overview/)
 
 ---
 
-## 🚀 시작하기
+## 📝 학습 팁
+- **보안 모범 사례 학습**
+  - CIS Kubernetes Benchmark를 기준으로 학습하세요.
+  - Pod Security Standards (PSS)와 Network Policies를 이해하세요.
+- **핵심 영역 연습**
+  - Cluster Hardening
+  - System Hardening
+  - Monitoring, Logging, and Runtime Security
+  - Supply Chain Security
+  - Troubleshooting and Security Auditing
+- [Mock Exam](https://killer.sh/)으로 실제 환경에 익숙해지세요.
 
-1. **리포지토리 클론**
-   ```bash
-   git clone https://github.com/yourusername/cks-study-guide.git
-   cd cks-study-guide
+---
 
+## 📑 CKS 관련 GitHub 리소스
+1. [CKS Study Guide](https://github.com/cncf/curriculum)
+2. [Kubernetes Security Examples](https://github.com/trimstray/k8s-security)
+3. [Falco Security Examples](https://github.com/falcosecurity/falco)
 
+---
+
+## 📅 학습 플랜
+| 주차  | 학습 목표                                | 비고                         |
+|-------|-----------------------------------------|------------------------------|
+| 1주차 | Cluster Hardening 기본                  | RBAC, Pod Security Standards |
+| 2주차 | Network Policies 및 Audit Logs 학습     |                              |
+| 3주차 | Supply Chain Security                  | 이미지 스캐닝, CI/CD 보안     |
+| 4주차 | Runtime Security                        | Falco, Sysdig 사용법         |
+| 5주차 | Mock Exam 및 복습                       |                              |
+
+---
+
+## 📌 참고 링크
+- [CNCF Security SIG](https://github.com/cncf/tag-security)
+- [Awesome Kubernetes Security](https://github.com/kubernetes/awesome-kubernetes-security)
+- [Kubernetes Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+---
+
+## 💬 문의 및 토론
+- CKS 관련 질문은 [Kubernetes Slack Channel](https://slack.k8s.io/)에서 나눠보세요.
+- 추가 자료 요청이나 문의 사항은 GitHub Issue를 통해 남겨주세요.
+
+---
+
+### 작성자: **[Your Name]**
